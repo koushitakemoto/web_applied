@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>キーの情報を表示する</h1>
+    <p>なにかキーを押すと、下に表示されます。</p>
+    <ul>
+        <li>e.key:<span id="ekey">-</span></li>
+        <li>e.code:<span id="ecode">-</span></li>
+        <li>e.type:<span id="etype">-</span></li>
+    </ul>
+
+    <script>
+        const ekey = document.getElementById("ekey");
+        const ecode = document.getElementById("ecode");
+        const etype = document.getElementById("etype");
+
+        document.addEventListener("keydown",(e) =>{
+            ekey.innerText=e.key;
+            ecode.innerText=e.code
+            etype.innerText=e.type
+        });
+
+        document.addEventListener("keyup",(e) => {
+            etype.innerText=e.type;
+        });
+    </script>
+
+</body>
+</html>

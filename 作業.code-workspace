@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../4_7デザインサンプル/4_7デザインサンプル"
+		},
+		{
+			"path": "../4A_テンプレート/4A_テンプレート"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "作業"
+	}
+}

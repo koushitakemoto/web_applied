@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>コンソールを見てください</p>
+
+    <script>
+        const player={
+            name:"ゆうき",
+            x:50,
+            y:96,
+            hp:10
+        };
+
+        console.log(player);
+        console.log(player.name);
+        console.log(player.hp);
+
+        player.x=player.x+10;
+        player.hp=player.hp-3;
+        player.score=0;
+        console.log(player);
+
+        //player = { name: "さくら" };
+
+        console.log(player.hp);
+        console.log(player["hp"]);
+
+        const key = "name";      
+        console.log(player[key]);
+
+        const ranking=[
+            {name:"ゆうき",score:950},
+            {name:"さくら",score:870},
+            {name:"はると",score:820}
+        ];
+
+        console.log(ranking[0]);
+        console.log(ranking[0].name);
+        console.log(ranking[1].score);
+
+        for(const item of ranking){
+            console.log(`${item.name}:${item.score}点`);
+            
+        }
+    </script>
+</body>
+</html>

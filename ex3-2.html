@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>コンソールを見てください</p>
+    <script>
+        const scores=[120,80,95];
+
+        console.log(scores);
+        console.log(scores[0]);
+        console.log(scores[2]);
+        console.log(scores.length);
+
+        scores.push(60);
+        console.log(scores);
+        console.log(scores.length);
+
+        //書き方1
+        for(let i =0; i < scores.length; i++){
+            console.log(`${i}番目:${scores[i]}`);
+        }
+
+        //書き方2
+        for(const score of scores){
+            console.log(score);
+        }
+
+        console.log(scores[4]);
+
+    </script>
+</body>
+</html>
