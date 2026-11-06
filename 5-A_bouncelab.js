@@ -6,7 +6,7 @@ let x=100;
 let y=80;
 let vx=180;
 let vy=140;
-const r=14;
+let r=14;
 let last=performance.now();
 
 function update(dt){
@@ -39,6 +39,26 @@ function draw(){
     ctx.arc(x,y,r,0,Math.PI*2);
     ctx.fill();
 }
+
+ document.addEventListener("keydown",(e)=>{
+        if(e.code==="ArrowUp"){
+            vx=vx*1.2;
+            vy=vy*1.2;
+        }
+        if(e.code==="ArrowDown"){
+            vx=vx*0.8;
+            vy=vy*0.8;
+        }
+         if(e.code==="ArrowRight"){
+            r=r+5;
+        }
+         if(e.code==="ArrowLeft"){
+            r=r-5;
+            if(r<=0){
+                r=0
+            }
+        }
+    });
 
 function loop(now){
     const dt=(now-last)/1000;
