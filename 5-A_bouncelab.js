@@ -6,10 +6,13 @@ let x=100;
 let y=80;
 let vx=180;
 let vy=140;
+let gravity =500;
+let bounce =0.8;
 let r=14;
 let last=performance.now();
 
 function update(dt){
+    vy =vy+gravity*dt;
     x=x+vx*dt;
     y=y+vy*dt;
 
@@ -24,7 +27,7 @@ function update(dt){
     }
     if(y+r>canvas.height){
         y=canvas.height-r;
-        vy=-vy;
+        vy=-vy*bounce;
     }
     if(y-r<0){
         y=r;
